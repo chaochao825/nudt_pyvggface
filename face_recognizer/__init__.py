@@ -1,3 +1,8 @@
-from .pyvggface_model import PyVGGFaceModel
+__all__ = []
 
-__all__ = ['PyVGGFaceModel']
+try:
+    from .pyvggface_model import PyVGGFaceModel
+
+    __all__.append("PyVGGFaceModel")
+except Exception:
+    PyVGGFaceModel = None
